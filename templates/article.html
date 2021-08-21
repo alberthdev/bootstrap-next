@@ -107,6 +107,6 @@
 {% endif %}
 {% if SHARIFF|default(false) %}
     <!-- add shariff support -->
-    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/shariff.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shariff@3.2.1/src/js/shariff.min.js" integrity="sha256-T7jfECPnDJp/b691utmNaMm/Tu1FTsIvziXMQ48lD18=" crossorigin="anonymous"></script>
 {% endif %}
 {% endblock %}

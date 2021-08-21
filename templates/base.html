@@ -55,12 +55,12 @@
 
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/themes/{{ BOOTSTRAP_THEME }}/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.6.0/dist/{{ BOOTSTRAP_THEME }}/bootstrap.min.css" crossorigin="anonymous" rel="stylesheet">
     {% else %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha256-T/zFmO5s/0aSwc6ics2KLxlfbewyRz6UNw1s3Ppf5gE=" crossorigin="anonymous" rel="stylesheet">
     {% endif %}
 
-    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/entypo.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@icon/entypo@1.0.0-alpha.3/entypo.css" integrity="sha256-MPtiZ+KLjuJeCQbJffkpERN1uUIOee1KsrfquNAciZw=" crossorigin="anonymous" rel="stylesheet">
 
     <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
     {% if 'tipue_search' in PLUGINS %}
@@ -77,7 +77,7 @@
         <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
     {% endif %}
     {% if SHARIFF %}
-        <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/shariff/shariff.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/shariff@3.2.1/dist/shariff.min.css" integrity="sha256-E82sKsXv1RQSmBzpWyI56/QYe+W7IzweGlo7uucQrhA=" crossorigin="anonymous" rel="stylesheet">
     {% endif %}
 
     {% if FEED_ALL_ATOM %}
@@ -103,7 +103,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse bg-inverse{% else %}navbar-light bg-faded{% endif %} fixed-top" role="navigation">
+<nav class="navbar navbar-expand-md {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-dark bg-primary{% else %}navbar-light bg-faded{% endif %} fixed-top" role="navigation">
     {% if MENUITEMS or (pages and DISPLAY_PAGES_ON_MENU) or (categories and DISPLAY_CATEGORIES_ON_MENU) %}
     <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target=".navbar-main-collapse" aria-label="Toggle navigation">
         <i class="icon-menu"></i>
@@ -190,10 +190,10 @@
 </div>
 {% include 'includes/footer.html' %}
 
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha256-7dA7lq5P94hkBsWdff7qobYkp9ope/L5LQy2t/ljPLo=" crossorigin="anonymous"></script>
 
 {% if BANNER %}
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
